@@ -1,0 +1,226 @@
+/*               *\
+  C O N T E N T S
+\*               */
+/*
+    BREAKPOINTS
+    GLOBAL
+    COMING SOON* - temporary
+    HEADER & FOOTER
+    CONTAINERS
+    FONTS
+    LINKS
+    LISTS
+*/
+/*                     *\
+  B R E A K P O I N T S
+\*                     */
+/*
+    @media only screen and (max-width: 550px) {}
+    @media only screen and (min-width: 551px) and (max-width: 1058px) {}
+    @media only screen and (min-width: 1059px) {}
+*/
+/*           *\
+  G L O B A L
+\*           */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --soft-white: rgb(249, 249, 249);
+    --dark-grey: rgb(26, 26, 26);
+    --light-orange: rgb(253, 126, 20);
+    --dark-orange: rgb(231, 67, 16);
+}
+/*                    *\
+  C O M I N G  S O O N
+\*                    */
+.coming-soon {
+    height: 60vh;
+    gap: 40px;
+}
+:is(.coming-soon) :is(h1) {
+    font-size: 48px;
+}
+/*                           *\
+  H E A D E R  &  F O O T E R
+\*                           */
+header,
+footer {
+    width: 100%;
+    background-color: var(--dark-grey);
+    color: var(--soft-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8vh;
+    padding: 10px 0;
+}
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 65px;
+}
+.nav-link {
+    color: var(--soft-white);
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.nav-link:hover {
+    color: var(--light-orange);
+    transition: 0.3s;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 25px 0 10px 0;
+}
+.footer-menu {
+    justify-content: space-evenly;
+}
+.footer-menu > div {
+    max-width: 400px;
+    min-width: 300px;
+}
+:is(footer) :is(h3) {
+    color: var(--dark-orange);
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+.footer-link {
+    color: var(--soft-white);
+    font-weight: 500;
+    line-height: 25px;
+}
+.footer-link:hover {
+    color: var(--light-orange);
+    padding-left: 5px;
+    transition: 0.3s;
+}
+.footer-left {
+    gap: 25px;
+}
+.footer-bottom {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+}
+.footer-bottom > .container {
+    max-width: 400px;
+    min-width: 300px;
+}
+.social-icons {
+    gap: 25px;
+}
+.social-icons a {
+    color: var(--dark-orange);
+}
+.social-icons a:hover {
+    color: var(--soft-white);
+    transition: 0.3s;
+}
+.social-icons svg{
+    width: 40px;
+    height: auto;
+}
+.britain-logo {
+    max-width: 200px;
+    border-radius: 10px;
+}
+/********************************************************************************************************\
+\********************************************************************************************************/
+/*                   *\
+  C O N T A I N E R S
+\*                   */
+.container {
+    display: flex;
+    width: 100%;
+}
+.image-container {
+    display: flex;
+    overflow: hidden;
+}
+.image-container img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: auto;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.sm-width {
+    width: 50%;
+    max-width: 1000px;
+}
+.md-width {
+    width: 75%;
+}
+.lg-width {
+    width: 100%;
+}
+/*         *\
+  F O N T S
+\*         */
+/*             *\
+  B U T T O N S
+\*             */
+.sm-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+}
+.lg-button {
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+}
+.orange-button {
+    background-color: var(--dark-orange);
+    color: var(--soft-white);
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orange-button:hover {
+    background-color: var(--dark-grey);
+    color: var(--light-orange);
+    transition: 0.3s;
+}
+/*         *\
+  L I N K S
+\*         */
+a {
+    text-decoration: none;
+}
+/*         *\
+  L I S T S
+\*         */
+ul, 
+ol {
+    list-style: none;
+}
