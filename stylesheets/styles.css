@@ -4,7 +4,7 @@
 /*
     BREAKPOINTS
     GLOBAL
-    COMING SOON* - temporary
+    COMING SOON* - temporary section and temporary classes - use ONLY while website is in coming soon mode
     HEADER & FOOTER
     CONTAINERS
     FONTS
@@ -38,11 +38,21 @@
   C O M I N G  S O O N
 \*                    */
 .coming-soon {
-    height: 60vh;
+    height: 100%;
     gap: 40px;
+    padding: 50px 0;
 }
 :is(.coming-soon) :is(h1) {
     font-size: 48px;
+}
+.home-video {
+    width: 800px;
+    height: auto;
+}
+.video-caption {
+    font-style: italic;
+    font-weight: 600;
+    text-align: right;
 }
 /*                           *\
   H E A D E R  &  F O O T E R
@@ -67,21 +77,26 @@ nav {
 .nav-right {
     display: flex;
     justify-content: flex-end;
-    gap: 65px;
+    gap: 25px;
 }
 .nav-link {
     color: var(--soft-white);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    padding: 0 25px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
 }
 .nav-link:hover {
     color: var(--light-orange);
+    border-left: 3px solid var(--light-orange);
+    border-right: 3px solid var(--light-orange);
     transition: 0.3s;
 }
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding: 25px 0 10px 0;
 }
@@ -210,6 +225,7 @@ footer {
     background-color: var(--dark-grey);
     color: var(--light-orange);
     transition: 0.3s;
+    cursor: pointer;
 }
 /*         *\
   L I N K S
