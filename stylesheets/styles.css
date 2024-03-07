@@ -5,7 +5,8 @@
     BREAKPOINTS
     GLOBAL
     COMING SOON* - temporary section and temporary classes - use ONLY while website is in coming soon mode
-    HEADER & FOOTER
+    HEADER
+    FOOTER
     CONTAINERS
     FONTS
     LINKS
@@ -33,6 +34,7 @@
     --dark-grey: rgb(26, 26, 26);
     --light-orange: rgb(253, 126, 20);
     --dark-orange: rgb(231, 67, 16);
+    --orange-grad: linear-gradient(0deg, var(--dark-orange) 0%, var(--light-orange) 100%); 
 }
 /*                    *\
   C O M I N G  S O O N
@@ -45,18 +47,25 @@
 :is(.coming-soon) :is(h1) {
     font-size: 48px;
 }
+.video-carousel {
+    display: flex;
+    gap: 50px;
+}
 .home-video {
-    width: 800px;
+    background: var(--orange-grad);
+    color: var(--soft-white);
+    background-clip: padding-box;
+    border: 5px solid transparent;
+    border-radius: 10px;
+}
+.home-video video {
+    max-width: 600px;
     height: auto;
+    padding: 5px;
 }
-.video-caption {
-    font-style: italic;
-    font-weight: 600;
-    text-align: right;
-}
-/*                           *\
-  H E A D E R  &  F O O T E R
-\*                           */
+/*           *\
+  H E A D E R
+\*           */
 header,
 footer {
     width: 100%;
@@ -95,8 +104,11 @@ nav {
     border-right: 3px solid var(--light-orange);
     transition: 0.3s;
 }
+/*           *\
+  F O O T E R
+\*           */
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     padding: 25px 0 10px 0;
 }
@@ -150,10 +162,25 @@ footer {
     width: 40px;
     height: auto;
 }
-.britain-logo {
+.britain-logo > .image-container {
     max-width: 200px;
     border-radius: 10px;
 }
+@media only screen and (max-width: 550px) {
+    .footer-bottom {
+        
+    }
+    .social-icons,
+    .britain-logo {
+        width: 40%;
+    }
+    .copyright{
+        order: 3;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 551px) and (max-width: 1058px) {}
+@media only screen and (min-width: 1059px) {}
 /********************************************************************************************************\
 \********************************************************************************************************/
 /*                   *\
